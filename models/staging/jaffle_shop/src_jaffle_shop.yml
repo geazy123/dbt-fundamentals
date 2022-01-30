@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    schema: jaffle_shop
+    database: heliumprojectdatabase
+    tables: 
+      - name: orders
+        identifier: orders
+      - name: customers
+        identifier: customers
