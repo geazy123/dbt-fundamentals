@@ -4,7 +4,7 @@ with payments as (
     ORDERID as order_id,
     PAYMENTMETHOD as payment_method,
     STATUS as order_status,
-    AMOUNT/100 as order_amount
+    {{cents_to_dollars('order_amount')}} as order_amount
      FROM {{ source('stripe', 'payments') }}
 )
 
